@@ -14,7 +14,10 @@ app.use(assets());
 app.set('view engine', 'jade');
 
 app.get('/', function(req, resp) {
-  return resp.render('index');
+  resp.render('index');
+  return resp.partial('menu', {
+    items: ['stream', 'works', 'about', 'blog']
+  });
 });
 
 port = process.env.PORT || process.env.VMC_APP_PORT || 3000;

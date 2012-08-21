@@ -5,17 +5,19 @@
 // [if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]
 head
   meta(charset='utf-8')
-  title Express CoffeeScript Template
-  meta(name='description', content='')
+  title Vladimir Vujosevic - metafunk
+  meta(name='description', content='Welcome to MetaFunk - online portfolio of Vladimir Vujosevic')
   meta(name='author', content='')
   // Mobile Specific
   meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
   // CSS
   != css("http://wilbur.io.s3.amazonaws.com/all.css")
+  != css("http://fonts.googleapis.com/css?family=Dosis|Lato")
   != css('app')
   
 body
+  include includes/header
   block content
 
   != js('http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js')
