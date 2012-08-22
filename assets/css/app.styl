@@ -1,18 +1,34 @@
 @import 'nib'
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+
+
 body 
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif
+  font-weight: 300 
 
 .container
   margin-top 60px
   margin: 0
 h1, h3 
   font-family: 'Lato', sans-serif;
+
+h1#logo 
+  font-family: 'Lato', sans-serif;
+  font-weight:400
+  letter-spacing:-.04em
+  padding:45px 0 0 45px
+  text-transform: uppercase
+  background: url(logo.png) 0 0 no-repeat
+  
+  
+  span 
+    font-size:22px;
 h2
   font-family: 'Dosis', sans-serif;
   font-weight: bold;
   smooth-button()
   width: 90%
-  font-size: 2em
+  font-size: 22px
 
 h3
   margin-top: 20px
@@ -24,4 +40,24 @@ pre
   margin-bottom: 20px
   padding: 10px
   border: 1px solid black
+
+p
+  font-size:22px
+  line-height:26px
+
+aside
+  float:left
+  font-size:24px
+  font-weight: normal
+  text-transform:uppercase
+  padding: 62px 50px 20px
+  
+  a
+    font-family: 'Lato', sans-serif
+    text-decoration:none
+    font-weight: 300 !important
+
+section.main-content 
+  padding-left:200px
+  padding-top:50px
   

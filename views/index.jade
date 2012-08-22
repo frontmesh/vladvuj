@@ -1,7 +1,7 @@
 extends layout
 block content
   .container
-    .sidebar
+    aside.sidebar
         menu = ["stream", "works", "about", "blog"]
             nav
                 ul#main-menu
@@ -14,8 +14,8 @@ block content
       
      
 
-    .right.ten.columns.offset-by-two
-    section
+    
+    section.main-content
      h2 Latest from the blog
      article
       h3 Blog title number one!
