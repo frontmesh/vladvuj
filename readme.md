@@ -1,11 +1,10 @@
-# Portfolio of Vladimir Vujosevic based on NodeJS - Express Coffee Template 5 (1.5)
+# Portfolio of Vladimir Vujosevic based on NodeJS Express Coffee Template
 
 custom domain : (http://vladvuj.com)
 heroku url : http://vladvuj.herokuapp.com
 
 
 ## Technologies
-This is a template that can be used to create nodejs applications using 
 
 * Node v0.6.17
 * Express v3.0.0rc2
