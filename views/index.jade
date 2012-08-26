@@ -1,13 +1,5 @@
 extends layout
 block content
-  .container
-    aside.sidebar
-        menu = ["stream", "works", "about", "blog"]
-            nav
-                ul#main-menu
-                    each menuitem in menu
-                        include includes/menu
-    
     section.main-content
      h2 Latest from the blog
      article
