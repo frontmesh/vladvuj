@@ -6,9 +6,24 @@ routes = function(app) {
     title: "Welcome to online portfolio of web developer Vladimir Vujosevic",
     menu: ["stream", "work", "about", "contact", "blog"]
   });
-  return app.get('/stream', function(req, res) {
+  app.get('/stream', function(req, res) {
     return res.render("stream", {
       title: 'it\'s the stream'
+    });
+  });
+  app.get('/work', function(req, res) {
+    return res.render("work", {
+      title: 'it\'s my work'
+    });
+  });
+  app.get('/about', function(req, res) {
+    return res.render("about", {
+      title: 'it\'s about me page'
+    });
+  });
+  return app.get('/contact', function(req, res) {
+    return res.render("contact", {
+      title: 'it\'s contact me page'
     });
   });
 };
