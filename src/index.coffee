@@ -6,9 +6,8 @@ app = express()
 # Add Connect Assets
 app.use assets()
 app.use express.static(process.cwd() + '/public')
+app.use app.router
 
-#app.use (req,res,next)->
-  #  req.status(404).render('404', url:{url: req.originalUrl})
 
 # Set View Engine
 app.set 'view engine', 'jade'
@@ -18,6 +17,11 @@ app.get '/', (req, resp) ->
   
 #Routes
 require('./routes')(app)
+
+#404 page
+app.get "*", (req, res)->
+	#res.send('what???', 404)
+	res.render '404' , title: "404 page"
 
 # Define Port
 port = process.env.PORT or process.env.VMC_APP_PORT or 4000

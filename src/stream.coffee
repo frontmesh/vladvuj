@@ -1,0 +1,8 @@
+stream = () ->
+
+
+
+
+
+
+module.exports = stream
