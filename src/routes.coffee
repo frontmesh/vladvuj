@@ -2,7 +2,7 @@ routes = (app) ->
     
     app.locals
         title: "Welcome to online portfolio of web developer Vladimir Vujosevic"
-        menu : [{text:"stream", url: "stream"},{text:"work", url:"work"},{text:"about", url:"about"}, {text:"contact", url:"contact"},{text:"blog", url:"http://frontmesh.heroku.com"}]
+        menu : [{text:"stream", url: "/stream"},{text:"work", url:"/work"},{text:"about", url:"/about"}, {text:"contact", url:"/contact"},{text:"blog", url:"http://frontmesh.heroku.com"}]
         
     
     app.get '/stream', (req,res) ->

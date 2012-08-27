@@ -1,5 +1,5 @@
 nav
 	ul#main-menu
-		each menuitem in menu   
+		- each menuitem in menu   
 			li
 				a(href="#{menuitem.url}")= menuitem.text
