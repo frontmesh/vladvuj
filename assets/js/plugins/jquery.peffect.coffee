@@ -8,9 +8,22 @@
 			element : "body"
 			effect 	: "fadeIn"
 			duration: 100
+			delay: 100
 			
 		
 		opts = $.extend {}, @defaults, options
 		
-		console.log opts
-	
+		self = @
+		
+		public_methods =
+			init: ()->
+				self.hide()
+									
+				if opts.effect is "fadeIn"
+					self.delay(opts.delay).fadeIn("slow")
+					
+					
+		
+		
+		@each ()->
+			public_methods.init()

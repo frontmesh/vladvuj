@@ -5,4 +5,3 @@ $ ->
   
 	$('body').pageEffect
 		element: 'header'
-		effect : 'fadeOut'
