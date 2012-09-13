@@ -7,7 +7,7 @@
 		@defaults =
 			element : "body"
 			effect 	: "fadeIn"
-			duration: 100
+			duration: 500
 			delay: 100
 			
 		
@@ -17,10 +17,10 @@
 		
 		public_methods =
 			init: ()->
-				self.hide()
+				self.css('opacity', 0)
 									
 				if opts.effect is "fadeIn"
-					self.delay(opts.delay).fadeIn("slow")
+					self.delay(opts.delay).animate({opacity:1}, opts.duration)
 					
 					
 		
