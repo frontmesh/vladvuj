@@ -1,6 +1,6 @@
 class App.Config
 	
-	
+	services: ['twitter', 'lastfm', 'github','gplus']
 			
 	# stream collection url
     URL_YOUTUBE                 : "http://gdata.youtube.com/feeds/api/videos?alt=json-in-script&author={USER_ID}&orderby=published&start-index=1&max-results={MAX_RESULTS}&callback=?"

@@ -17,10 +17,10 @@
 		
 		public_methods =
 			init: ()->
-				self.hide()
-									
+						
 				if opts.effect is "fadeIn"
-					self.delay(opts.delay).fadeIn("slow")
+					self.css('opacity', 0)		
+					self.delay(opts.delay).animate({opacity: 1 }, opts.duration)
 					
 					
 		
