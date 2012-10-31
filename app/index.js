@@ -23,6 +23,8 @@ app.get('/', function(req, resp) {
 
 require('./routes')(app);
 
+require('./helpers')(app);
+
 app.get("*", function(req, res) {
   return res.render('404', {
     title: "404 page"

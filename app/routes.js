@@ -19,7 +19,7 @@ routes = function(app) {
         url: "/contact"
       }, {
         text: "blog",
-        url: "http://frontmesh.heroku.com"
+        url: "http://blog.vladvuj.com"
       }
     ]
   });

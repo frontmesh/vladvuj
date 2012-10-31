@@ -18,6 +18,11 @@ app.get '/', (req, resp) ->
 #Routes
 require('./routes')(app)
 
+#Helpers
+require('./helpers')(app)
+
+
+
 #404 page
 app.get "*", (req, res)->
 	#res.send('what???', 404)
