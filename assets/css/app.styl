@@ -34,14 +34,16 @@ h2
   font-weight: bold;
   text-transform:uppercase;
   width: 90%
-  font-size: 22px
+  font-size: 18px
+  letter-spacing: 0.05em
+
   &:first-child
     color:#00a8ff
   &:nth-child(3)
     color:#ffc208
 
 h3
-  margin-top: 20px
+  margin: 20px 0
 pre
   font-family: courier
   background-color: rgba(0,0,0,.8)
@@ -52,7 +54,7 @@ pre
   border: 1px solid black
 
 p
-  font-size:22px
+  font-size:18px
   line-height:26px
 
 aside
@@ -67,8 +69,17 @@ aside
     font-family: ffamily
     text-decoration:none
     font-weight: 300 !important
+    padding: 2px 10px
+    border-bottom:1px solid white
+    position:relative
+    z-index:1
+    transition(all ease-in-out 500ms) 
     &:hover
-      text-decoration:underline
+      background-color: #e4e4e4
+      border-bottom: 1px solid #ccc;
+      border-left: 3px solid #000;
+      z-index:2
+      text-shadow:1px 1px 1px #fff;
 
 section.main-content
   float:right
