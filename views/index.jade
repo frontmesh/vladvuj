@@ -1,15 +1,13 @@
 extends layout
 block content
-    section.main-content
-     h2 Latest from the blog
-     article
-      h3 Blog title number one!
-      time(datetime='17/08/2012') 17/08/2012 
-        time 23:32
-      
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus auctor turpis convallis lacinia. Pellentesque ultrices scelerisque massa ut tempor. Phasellus quis sapien nunc, eget pretium turpis. Sed sit amet felis ut lacus gravida bibendum non mollis justo. Nulla elit urna, commodo id suscipit eu, tempor vitae ligula.
-       
-     h2 Stream
-     article
-     
-      
+	section.main-content
+		h2 Latest from the blog
+		each article in articles
+			date = article.pubdate.toString()
+			article
+				h3= article.title
+				time(datetime='17/08/2012')= date.substr(0,21)
+				
+				!=article.description
+		h2 Stream
+			article

@@ -9,4 +9,4 @@ $ ->
 	app = new App()
   
 	$('body').pageEffect
-		duration: 2000
+		duration: 300

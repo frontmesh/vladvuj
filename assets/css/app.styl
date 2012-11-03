@@ -27,15 +27,19 @@ h1#logo
   background-repeat:no-repeat
   background-position: 350px 0 
   
+  a
+    text-decoration:none
+  
   span 
     font-size:22px;
 h2
   font-family: 'Dosis', sans-serif;
-  font-weight: bold;
-  text-transform:uppercase;
+  font-size: 28px;
+  letter-spacing: -.05em;
+  word-spacing: .1em;
+  font-weight: normal;
   width: 90%
-  font-size: 18px
-  letter-spacing: 0.05em
+  
 
   &:first-child
     color:#00a8ff
@@ -44,6 +48,8 @@ h2
 
 h3
   margin: 20px 0
+  letter-spacing: -.05em;
+  word-spacing: .2em;
 pre
   font-family: courier
   background-color: rgba(0,0,0,.8)
@@ -73,18 +79,23 @@ aside
     border-bottom:1px solid white
     position:relative
     z-index:1
+    border-left: 3px solid transparent;
     transition(all ease-in-out 500ms) 
     &:hover
-      background-color: #e4e4e4
-      border-bottom: 1px solid #ccc;
+      background-color: #e2e2e2
+      border-bottom: 1px solid transparent;
       border-left: 3px solid #000;
       z-index:2
       text-shadow:1px 1px 1px #fff;
     &:active 
       color:#999
-      border-left-color:#ccc
+      border-left-color:transparent
       background-color: #fdfdfd
+      border-top: 1px solid #ccc;
+      border-right: 3px solid #ccc;
       transition-duration(100ms)
+    &:visited
+      text-decoration:none;
 
 section.main-content
   float:right

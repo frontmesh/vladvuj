@@ -25,17 +25,17 @@ routes = function(app) {
   });
   app.get('/stream', function(req, res) {
     return res.render("stream", {
-      title: 'it\'s the stream'
+      title: 'It\'s the stream'
     });
   });
   app.get('/work', function(req, res) {
     return res.render("work", {
-      title: 'it\'s my work'
+      title: 'It\'s my work'
     });
   });
   app.get('/about', function(req, res) {
     return res.render("about", {
-      title: 'it\'s about me page'
+      title: 'It\'s about me page'
     });
   });
   return app.get('/contact', function(req, res) {

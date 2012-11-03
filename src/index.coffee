@@ -1,6 +1,7 @@
 express = require 'express'
 stylus = require 'stylus'
 assets = require 'connect-assets'
+fp = require 'feedparser'
 
 app = express()
 # Add Connect Assets
@@ -13,7 +14,9 @@ app.use app.router
 app.set 'view engine', 'jade'
 # Get root_path return index view
 app.get '/', (req, resp) -> 
-  resp.render 'index'
+  fp.parseUrl 'http://blog.vladvuj.com/atom.xml', (err, meta, articles)->
+    return console.error(err) if err
+    resp.render 'index', articles: articles
   
 #Routes
 require('./routes')(app)
@@ -29,6 +32,6 @@ app.get "*", (req, res)->
 	res.render '404' , title: "404 page"
 
 # Define Port
-port = process.env.PORT or process.env.VMC_APP_PORT or 4000
+port = process.env.PORT or process.env.VMC_APP_PORT or 4001
 # Start Server
 app.listen port, -> console.log "Listening on #{port}\nPress CTRL-C to stop server."
