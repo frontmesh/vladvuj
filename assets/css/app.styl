@@ -1,6 +1,7 @@
 @import 'nib'
 // Variables 
-ffamily = 'Lato', sans-serif
+ffamily = 'Lato','PT Sans', sans-serif
+ffamily2 = 'PT Sans', 'Lato',sans-serif
 
 body 
   font-family: ffamily
@@ -13,6 +14,7 @@ body
 .container
   margin-top 60px
   margin: 0
+  
 h1, h3 
   font-family: ffamily
 
@@ -33,13 +35,9 @@ h1#logo
   span 
     font-size:22px;
 h2
-  font-family: 'Dosis', sans-serif;
-  font-size: 28px;
-  letter-spacing: -.05em;
-  word-spacing: .1em;
-  font-weight: normal;
+  font: bold 18px/24px "open sans";
+  text-transform:uppercase
   width: 90%
-  
 
   &:first-child
     color:#00a8ff
@@ -50,6 +48,9 @@ h3
   margin: 20px 0
   letter-spacing: -.05em;
   word-spacing: .2em;
+  font: bold 18px/24px ffamily
+  
+  
 pre
   font-family: courier
   background-color: rgba(0,0,0,.8)
@@ -60,8 +61,10 @@ pre
   border: 1px solid black
 
 p
-  font-size:18px
+  font-size:17px
   line-height:26px
+  font-family:ffamily
+  font-style: normal
 
 aside
   float:left

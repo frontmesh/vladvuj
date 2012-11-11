@@ -3,3 +3,17 @@ extends layout
 block content
     section.main-content
         h2= title
+        
+        h3 Send me an email
+        
+        form(type="post", action="/")
+          label(for="name") Your Name
+          input(type="text", id="name")
+          
+          label(for="subject") Subject
+          select(id="subject")
+            option(value="hi") Just wanted to say hi!
+            option(value="quote") I need a quote for a project!
+          
+          textarea(id="body")
+          input(type="submit",value="send")
