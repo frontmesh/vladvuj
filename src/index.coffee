@@ -17,7 +17,15 @@ app.get '/', (req, resp) ->
   fp.parseUrl 'http://blog.vladvuj.com/atom.xml', (err, meta, articles)->
     return console.error(err) if err
     resp.render 'index', articles: articles
-  
+
+
+app.configure 'development', ()->
+	app.use express.errorHandler dumpExceptions: true, showStack: true
+
+app.configure 'production', ()->
+	app.use express.errorHandler()
+
+
 #Routes
 require('./routes')(app)
 

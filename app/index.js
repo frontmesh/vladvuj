@@ -30,6 +30,17 @@ app.get('/', function(req, resp) {
   });
 });
 
+app.configure('development', function() {
+  return app.use(express.errorHandler({
+    dumpExceptions: true,
+    showStack: true
+  }));
+});
+
+app.configure('production', function() {
+  return app.use(express.errorHandler());
+});
+
 require('./routes')(app);
 
 require('./helpers')(app);
