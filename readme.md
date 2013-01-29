@@ -1,5 +1,5 @@
 # Portfolio of Vladimir Vujosevic 
-## based on NodeJS Express Coffee Template
+### based on NodeJS Express Coffee Template
 
 custom domain : (http://vladvuj.com) (done)
 heroku url : http://vladvuj.herokuapp.com (done)
